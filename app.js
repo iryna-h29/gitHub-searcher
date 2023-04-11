@@ -133,7 +133,6 @@ async function onChange(event) {
                 const reposResponse = await fetch(`${response.repos_url}?sort=created`);
                 const repos = await reposResponse.json();
                 let lastRepos = repos.slice(0, 5);
-                console.log(lastRepos);
                 ui.showLastRepos(lastRepos);
             }
         }
